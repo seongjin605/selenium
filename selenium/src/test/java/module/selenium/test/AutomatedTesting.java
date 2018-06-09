@@ -58,7 +58,8 @@ public class AutomatedTesting extends TestCase {
 		driver.findElement(By.xpath("//*[@id=\"board_write\"]/table/tbody/tr[1]/td/table[1]/tbody/tr/td[3]/input")).sendKeys("SELENIUM JAVA API TEST");
 		
 		Thread.sleep(2000);
-		//매우 중요!!!! iframe 인식
+		
+		//iframe id값을 조회해서 내부로 접근
 		driver.switchTo().frame(driver.findElement(By.id("webeditor")));
 		
 		JavascriptExecutor jsDriver=(JavascriptExecutor) driver;
